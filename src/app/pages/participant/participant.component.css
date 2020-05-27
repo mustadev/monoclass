@@ -1,0 +1,29 @@
+.add-btn {
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    bottom: 5% ;
+    right: 10%;
+    width: 75px;
+    height: 75px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.5rem;
+    border-radius: 50%;
+}
+
+@media only screen and (min-width: 992px) {
+  .add-btn {
+      right: 20%;
+  }
+}
+
+a {
+  text-decoration-line: none;
+}
+  

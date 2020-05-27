@@ -1,0 +1,50 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<form novalidate #form="ngForm" (ngSubmit)="submit(form)">
+<div class="modal-body">
+
+        <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class="form-control" name="nom" [(ngModel)]="participant.nom" placeholder="Nom" required
+                minlength="2" maxlength="20" pattern="^[a-zA-Z]+$">
+        </div>
+        <div class="form-group">
+            <label>Prenom</label>
+            <input type="text" class="form-control" name="prenom" [(ngModel)]="participant.prenom" placeholder="Prenom"
+                required minlength="2" maxlength="20" pattern="^[a-zA-Z]+$">
+        </div>
+        <div class="form-group">
+            <label for="dateOfBirth">Date of birth</label>
+            <div class="input-group">
+                <input [(ngModel)]="participant.dateNaissance" required id="dateOfBirth" class="form-control" 
+                placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+                [minDate]="{year: 1850, month: 1, day: 1}"
+                    #dp="ngbDatepicker">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="participant.email" placeholder="Email"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label>Tel</label>
+            <input type="text" class="form-control" name="tel" [(ngModel)]="participant.tel" placeholder="Email"
+                required>
+        </div>
+  
+
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-outline-dark">Save</button>
+</div>
+
+</form>

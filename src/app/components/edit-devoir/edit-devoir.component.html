@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<form novalidate #form="ngForm" (ngSubmit)="submit(form)">
+<div class="modal-body">
+
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="titre" [(ngModel)]="devoir.titre" placeholder="titre" required
+                minlength="2" maxlength="20" pattern="^[a-zA-Z]+$">
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea type="text" class="form-control" name="description" [(ngModel)]="devoir.description" placeholder="Description"
+                required minlength="3" pattern="^[a-zA-Z]+$">
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label>Youtube Video</label>
+            <input type="text" class="form-control" name="ytburl" [(ngModel)]="devoir.ytbUrl" placeholder="Youtube Video"
+                required>
+        </div>
+  
+
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-outline-dark">Save</button>
+</div>
+
+</form>

@@ -1,0 +1,80 @@
+{
+  "participants": [
+    {
+      "nom": "Plank",
+      "prenom": "Max",
+      "dateNaissance": {
+        "year": 1858,
+        "month": 4,
+        "day": 23
+      },
+      "email": "plank.max@gmail.com",
+      "tel": "0606060606",
+      "age": 162,
+      "id": 1
+    },
+    {
+      "nom": "Bohr",
+      "prenom": "Niels",
+      "dateNaissance": {
+        "year": 1885,
+        "month": 10,
+        "day": 7
+      },
+      "email": "niels.bohr@gmail.com",
+      "tel": "0606060606",
+      "age": 135,
+      "id": 2
+    },
+    {
+      "nom": "Mustapha",
+      "prenom": "Mustapha",
+      "dateNaissance": {
+        "year": 1994,
+        "month": 5,
+        "day": 20
+      },
+      "email": "test@test.com",
+      "tel": "0606060607",
+      "password": "password",
+      "age": 26,
+      "id": 3
+    }
+  ],
+  "devoirs": [
+    {
+      "id": 0,
+      "titre": "How To Generate Doc",
+      "description": "How To Generate JavaScript Documents",
+      "ytbUrl": "https://www.youtube.com/watch?v=-NER_Dy7ohY"
+    },
+    {
+      "titre": "Angular Crash Course",
+      "description": "Angular Crash Cours By Traversy Media ",
+      "ytbUrl": "https://www.youtube.com/watch?v=Fdf5aTYRW0E",
+      "id": 1
+    }
+  ],
+  "formateurs": [
+    {
+      "nom": "Mohamde",
+      "prenom": "Mohamed",
+      "tel": "06060606",
+      "email": "mohamed@gmail.com",
+      "password": "password",
+      "id": 0
+    }
+  ],
+  "discussions": [
+    {
+      "body": "Hi",
+      "sender": "Mohamed Mohamde",
+      "id": 1
+    },
+    {
+      "body": "Hello",
+      "sender": "Mustapha Mustapha",
+      "id": 2
+    }
+  ]
+}

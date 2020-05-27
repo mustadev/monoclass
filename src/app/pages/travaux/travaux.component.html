@@ -1,0 +1,45 @@
+<!-- Nav Bar -->
+<app-nav-bar></app-nav-bar>
+<!-- Nav Bar -->
+
+<!-- Test Fragment -->
+<!-- <div class="row">
+    <div *ngFor="let devoir of devoirs" class="col">
+        <a [routerLink]='"."' [fragment]="devoir.id">{{devoir.id}}</a>
+    </div>
+</div> -->
+<!-- test Fragment -->
+<!-- travaux -->
+<div class="row p-2">
+    <div *ngFor="let devoir of devoirs" class="col-12">
+        <div class="mr-md-5 ml-md-5">
+            <div class="card mr-md-5 ml-md-5" [attr.id]='devoir.id'>
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-8 col-lg-10">
+                            <h5>{{devoir.titre}}</h5>
+                        </div>
+                        <div class="col-sm-4 col-lg-2">
+                            <div *ngIf="showControlButtons()" class="btn-group" role="group" aria-label="Basic example">
+                                <button (click)="editDevoir(devoir.id)" class="btn btn-secondary">Edit</button>
+                                <button (click)="deleteDevoir(devoir.id)" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{devoir.description}}</p>
+                </div>
+                <div class="d-flex justify-content-center " style="height: 400px;">
+                    <iframe width="560" height="315" [src]="getYtbEmbedUrl(devoir.ytbUrl) | safeUrl" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button *ngIf="showControlButtons()" (click)="addDevoir()"
+        class="btn btn-primary add-btn"><span>&#43;</span></button>
+</div>
+<!-- travaux -->

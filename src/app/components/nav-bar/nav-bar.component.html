@@ -1,0 +1,23 @@
+<!-- main nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 p-0">
+    <a class="navbar-brand" [routerLink]="'.'">MonoClass</a>
+
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        &#9776;
+    </button>
+
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <ul class="navbar-nav text-center w-100">
+            <li class="nav-item  flex-fill">
+                <!-- Step 4: Close the menu when a link is clicked. -->
+                <a class="nav-link" [routerLink]="['/discussion']" routerLinkActive="active" (click)="isMenuCollapsed = true">Discussion</a>
+            </li>
+            <li class="nav-item flex-fill">
+                <a class="nav-link" [routerLink]="['/travaux']" routerLinkActive="active" (click)="isMenuCollapsed = true">Travaux et Devoirs</a>
+            </li>
+            <li class="nav-item flex-fill">
+                <a class="nav-link" [routerLink]="['/participant']" routerLinkActive="active" (click)="isMenuCollapsed = true">Participant</a>
+            </li>
+        </ul>
+    </div>
+</nav>
